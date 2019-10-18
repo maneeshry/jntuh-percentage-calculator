@@ -32,9 +32,7 @@ public class first_sem {
 		sum_credit_points=credit_points[i]+sum_credit_points;
 		
 	}
-	System.out.println(sum_credits);
-	System.out.println(sum_credit_points);
-	double sgpa=152/21;
+	
 	System.out.println(sgpa);
 	scan.close();
 
