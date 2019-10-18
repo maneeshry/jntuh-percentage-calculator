@@ -1,0 +1,32 @@
+
+<form id="link">
+        <select multiple="multiple">
+  <option value="file:///home/manoj/Documents/project/1_1.html">1_1</option>
+  <option value="file:///home/manoj/Documents/project/1_2.html">1_2</option>
+  <option value="file:///home/manoj/Documents/project/2_1.html">2_1</option>
+  <option value="file:///home/manoj/Documents/project/2_2.HTML">2_2</option>
+  <option value="file:///home/manoj/Documents/project/3_1.html">3_1</option>
+  <option value="file:///home/manoj/Documents/project/3_2.html">3_2</option>
+  <option value="file:///home/manoj/Documents/project/4_1.html">4_1</option>
+  <option value="file:///home/manoj/Documents/project/4_2.html">4_2</option>
+</select><br>
+<input class="SubmitButton" type="submit" name="SUBMITBUTTON" value="Submit" style="font-size:20px; "/>
+</form>
+</div>
+<script src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+<script>
+    $('#link').on('submit', function (e) {
+        e.preventDefault();
+        var $form = $(this),
+                $select = $form.find('select'),
+                links = $select.val();
+        if (links.length > 0) {
+            for (i in links) {
+                link = links[i];
+                window.open(link);
+            }
+        }
+    });
+</script>
+
